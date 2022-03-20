@@ -1,0 +1,39 @@
+.sliderContainer {
+  margin-top: 100px;
+}
+
+.imgContainer {
+  img {
+    width: 100%;
+  }
+}
+
+:global(.slick-dots) {
+  bottom: 15px;
+
+  li {
+    margin: 0 20px;
+  }
+
+  li button::before {
+    font-size: 16px;
+  }
+}
+
+:global(.slick-arrow) {
+  z-index: 99999;
+}
+
+:global(.slick-prev) {
+  left: 10px;
+}
+
+:global(.slick-next) {
+    right: 30px;
+  }
+
+:global(.slick-prev::before),
+:global(.slick-next::before) {
+  color: rgba(204, 204, 204, 0.7);
+  font-size: 40px;
+}

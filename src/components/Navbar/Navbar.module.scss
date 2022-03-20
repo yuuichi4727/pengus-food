@@ -1,0 +1,164 @@
+$primary: #ff7a76;
+$secondary: #2b3a67;
+
+.Container {
+  background-color: $secondary;
+  position: fixed;
+  width: 100%;
+  z-index: 99999999999;
+  top: 0;
+}
+
+.navbarContainer {
+  height: 100px;
+  padding: 0 50px;
+  background-color: $secondary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.callButton {
+  background-color: $primary;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #fff;
+}
+
+.item:nth-child(2) {
+  flex: 3;
+}
+
+.item:nth-child(3) {
+  justify-content: flex-end;
+}
+
+.texts {
+  margin-left: 20px;
+  color: #fff;
+}
+
+.text:first-child {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.text:last-child {
+  font-style: 20px;
+  font-weight: bold;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: #fff;
+  img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.listItem {
+  cursor: pointer;
+
+  margin: 20px;
+  font-weight: 500;
+}
+
+.cart {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.cartContainer {
+  position: relative;
+  .cart {
+    position: relative;
+    top: -2px;
+  }
+}
+
+.counter {
+  position: absolute;
+  color: $secondary;
+  top: 0;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* mobile & tablet */
+@media (max-width: 1023px) {
+}
+
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .navbarContainer {
+  }
+  .callButton {
+      z-index: 9999;
+  }
+  .listItem{
+      margin: 8px;
+      font-size: 14px;
+  }
+
+  .texts {
+    font-size: 10px;
+    color: #fff;
+    display: none;
+    position: absolute;
+    width: 100px;
+    bottom: 4px;
+    left: -100px;
+    background: $primary;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    padding: 5px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .item:nth-child(1):hover {
+    position: relative;
+    .texts {
+      display: block;
+    }
+  }
+}
+
+/* mobile */
+@media (max-width: 739px) {
+  .item:nth-child(2) {
+    display: none;
+  }
+  .item:nth-child(1) {
+    flex: 3;
+  }
+  .texts {
+    font-size: 15px;
+  }
+}
